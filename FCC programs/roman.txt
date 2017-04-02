@@ -1,0 +1,37 @@
+function romanize (num) {
+    roman = [];
+    var a = String(+num).split("");
+    console.log(a);
+    if (a.length > 1) {
+        switch (a[0]) {
+            case "1": roman.push("X");
+                break;
+            case "2": roman.push("XX");
+                break;
+        }
+    } 
+    switch (a[a.length - 1]) {
+        case "0": break;
+        case "1": roman.push("I");
+            break;
+        case "2": roman.push("II");
+            break;
+        case "3": roman.push("III");
+            break;
+        case "4": roman.push("IV");
+            break;
+        case "5": roman.push("V");
+            break;
+        case "6": roman.push("VI");
+            break;
+        case "7": roman.push("VII");
+            break;
+        case "8": roman.push("VIII");
+            break;
+        case "9": roman.push("IX");
+            break;
+    }
+    var newRoman = roman.join("");
+    return newRoman;
+}
+romanize(16);

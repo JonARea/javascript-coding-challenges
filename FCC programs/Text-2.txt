@@ -1,0 +1,17 @@
+function findLongestWord(string) {
+  
+ var str = string.split(" ");
+
+    for (var i = 0; i < str.length; i++) {
+       var longest = 0;
+       if (longest < str[i].length) {
+           longest = str[i].length;
+       }
+    }
+       
+    return longest;
+};
+
+
+//findLongestWord("Time to sleep");
+findLongestWord("The quick jellyfish anamatopiea")

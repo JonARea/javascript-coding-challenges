@@ -1,0 +1,11 @@
+function nofalsey (array) {
+    var newA = [];
+    for (i = 0; i < array.length; i++) {
+        if (array[i]) {
+            newA.push(array[i]);
+        }
+    }
+    return newA;
+}
+
+nofalsey([3,10,0,null,"fefee"]);

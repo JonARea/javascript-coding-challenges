@@ -1,0 +1,13 @@
+function repeat (string, x) {
+    var newstring = ""
+    if (x > 0) {
+        var i = 1;
+        while (i <= x) {
+        newstring += string;
+        i++;
+        }
+    }
+    return newstring;
+
+}
+repeat("abc", 3);

@@ -1,0 +1,18 @@
+function steamroller(arr, r) {
+  // I'm a steamroller, baby
+  if (!r) {
+    r = [];
+  }
+  var flat = [];
+  for (var i =0; i < arr.length; i++)
+    if (Array.isArray(arr[i])) {
+      steamroller(arr[i], r);
+      
+    } else {
+      r.push(arr[i]);
+  }
+  
+  return r;
+}
+
+steamroller([1, [2], [3, [[4]]]]);

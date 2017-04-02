@@ -1,0 +1,18 @@
+function mutation(arr) {
+    var first = arr[0].toString().toLowerCase();
+    var second = arr[1].toString().toLowerCase();
+    
+    var oneSplit = first.split("")
+    var twoSplit = second.split("")
+    var i = 0;
+    
+    while (i < twoSplit.length) {
+        if (oneSplit.indexOf(twoSplit[i]) === -1) {
+            return false;
+        } else {
+            i++;
+        }
+    }
+    return true;
+}
+mutation(["oleH", "hEllo"]);

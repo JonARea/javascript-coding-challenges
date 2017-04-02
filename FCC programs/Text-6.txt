@@ -1,0 +1,17 @@
+function findLongestWord(string) {
+    var words = string.split(" ");
+    var longest = 0;
+    var lWord = null;
+    for (i = 0; i < words.length; i++) {
+        //code
+        if (longest < words[i].length) {
+            //code
+            longest = words[i].length;
+            lWord = words[i];
+        }
+    }
+        console.log(lWord);
+        return longest;
+}
+
+findLongestWord("I wish I had hippopotamuses")

@@ -1,0 +1,15 @@
+function translate(str) {
+    var vowel = /a|e|i|o|u/;
+    if (vowel.test(str.charAt(0))) {
+            var pig = str + "way";
+    } else if (vowel.test(str.charAt(1))) {
+        var pig = str.substr(1) + str.charAt(0) + "ay";       
+    } else if (vowel.test(str.charAt(2))) {
+        var pig = str.substr(2) + str.substr(0, 2) + "ay"; 
+    }
+
+ return pig;
+}
+
+translate("glove");
+

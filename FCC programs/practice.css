@@ -1,0 +1,61 @@
+﻿#logo  {
+
+	color: red;
+
+}
+
+
+#navigation {
+    position: absolute;
+    top: 15px;
+    left: 400px;
+    width: 200px;
+    color: red
+    
+}
+
+#navigation ul {
+    list-style-type: none;
+    margin-left: 5px;
+    padding: 0;
+
+}
+
+#navigation li {
+
+	float: left;
+}
+
+a {
+	display: block;
+	width: 60px
+
+}
+
+#content {
+	
+    margin: 0px 200px;
+	border-style: none double;
+	border-color: lightgrey;
+	border-width: 5px;
+	padding: 5px;	
+    
+    
+}
+
+#leftmargin  {
+
+	float: left;
+	background-color: lightgrey;
+	width: 190px;
+	height: 500px;
+
+}
+#rightmargin {
+
+    float: right;
+    background-color: black;
+    width: 190px;
+    height: 500px;
+    
+}

@@ -1,0 +1,14 @@
+function end(str, target) {
+  // "Never give up and good luck will find you."
+  // -- Falcor
+  console.log(str.length - 1);
+  
+  if (str.substr((str.length - target.length), str.length) === target) {
+    //code
+    return true;
+  } else { return false
+  }     
+
+}
+
+end("Rico is smart", "stupid");
