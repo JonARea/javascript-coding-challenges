@@ -1,0 +1,64 @@
+function foo() {
+    'use strict';
+    //this code is in strict mode
+}
+
+'use strict';
+function bar() {
+    //this code is in strict
+}
+
+
+var a = 42;
+
+(function IIFE(){
+    var a = 10;
+    console.log(a); // 10
+    
+})();
+
+console.log(a);  //42
+
+var x = (function IIFE(){
+    return 42;
+})(); 
+
+x;   //42
+
+function makeAdder(x) {
+    // parameter 'x' is an inner variable
+    // inner function 'add' uses //'x' so it has a 'closure over //it
+    
+    function add(y) {
+        return x + y;
+    };
+    
+    return add;
+}
+var plusOne = makeAdder(1);
+var plusTen = makeAdder(10);
+
+plusOne(3);  //4
+plusTen(13); //23
+
+function User(){
+    var username, password;
+    
+    function doLogin(user, pw) {
+        username = user;
+        password = pw;
+    }
+    
+    var publicAPI = {
+        login: doLogin
+    };
+    
+    return publicAPI;
+    
+}
+//create a user module instance
+
+var fred = User();
+
+fred.login('fred', '1234');
+

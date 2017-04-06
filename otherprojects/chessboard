@@ -1,0 +1,47 @@
+
+//my first solution isn't very good- only works with even numbers
+
+function chessboard (size) {
+    var board = '';
+    for (var rows = 0; rows < size; rows++) {
+        if (rows === 0 || rows % 2 === 0) {
+            board += ' #'.repeat( size/2 );
+        } else {
+            board += '# '.repeat( size/2 );
+        }
+        board += '\n';
+    }
+console.log(board);
+}
+
+chessboard(16);
+
+//remember that two dimensions = two nested loops
+// 01234567
+// 1
+// 2
+// 3
+// 4
+// 5
+// 6
+// 7
+
+function chessboard (size) {
+    var board = '';
+    for (var rows = 0; rows < size; rows++) {
+        for (var cols = 0; cols < size; cols++) {
+            if (rows + cols === 0 || (rows + cols) % 2 === 0) {
+                board += ' ';
+            } else {
+                board += '#';
+            }
+        
+        }
+        board += '\n';
+        
+        
+    }
+console.log(board);
+}
+
+chessboard(16);
